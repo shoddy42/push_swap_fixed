@@ -6,7 +6,7 @@
 /*   By: wkonings <wkonings@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/16 14:10:12 by wkonings      #+#    #+#                 */
-/*   Updated: 2022/11/24 16:17:47 by wkonings      ########   odam.nl         */
+/*   Updated: 2022/11/24 17:08:41 by wkonings      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <limits.h>
 # include <unistd.h>
 # include "../libft/libft.h"
-
-# include <stdio.h> //TODO: REMOVE THIS AND -g FROM MAKE
 
 typedef struct s_pair
 {

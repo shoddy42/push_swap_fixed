@@ -6,7 +6,7 @@
 /*   By: wkonings <wkonings@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/16 14:15:11 by wkonings      #+#    #+#                 */
-/*   Updated: 2022/11/24 16:11:44 by wkonings      ########   odam.nl         */
+/*   Updated: 2022/11/24 17:09:20 by wkonings      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	push_a(t_ps *a, t_ps *b)
 }
 
 //  swap the first 2 elements at the top of stack a. 
-//  Do nothing if there is only one or no elements
 
 void	swap_a(t_ps *a)
 {
@@ -78,7 +77,6 @@ void	swap_a(t_ps *a)
 }
 
 //  swap the first 2 elements at the top of stack b.
-//  Do nothing if there is only one or no elements)
 
 void	swap_b(t_ps *b)
 {
