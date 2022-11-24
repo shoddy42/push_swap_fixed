@@ -6,7 +6,7 @@
 /*   By: wkonings <wkonings@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/02 21:22:56 by wkonings      #+#    #+#                 */
-/*   Updated: 2022/11/24 16:04:15 by wkonings      ########   odam.nl         */
+/*   Updated: 2022/11/24 21:03:23 by wkonings      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	count_nums(char *str, t_ps *a)
 	int	nums;
 	int	i;
 
-	if (ft_strcmp(str, "") == 0)
+	if (ft_strcontains(str, "1234567890") == false)
 		ps_error();
 	i = 0;
 	nums = 0;
@@ -70,13 +70,15 @@ long	ps_atol(const char *nb, t_ps *a)
 long	*atol_split(char *input, t_ps *a, int i, int j)
 {
 	long	*ret;
+	int		nums;
 	int		len;
 
-	ret = ft_calloc(count_nums(input, a), sizeof(int));
+	nums = count_nums(input, a);
+	ret = ft_calloc(nums + 1, sizeof(int));
 	if (!ret)
 		a->error = 1;
 	len = ft_strlen(input);
-	while (++i < len)
+	while (++i < len && j + 1 < nums)
 	{
 		ret[++j] = ps_atol(&*(input + i), a);
 		if (ret[j] > INT_MAX || ret[j] < INT_MIN)

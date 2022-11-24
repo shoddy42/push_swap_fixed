@@ -6,7 +6,7 @@
 /*   By: wkonings <wkonings@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/18 12:00:16 by wkonings      #+#    #+#                 */
-/*   Updated: 2022/11/24 16:53:52 by wkonings      ########   odam.nl         */
+/*   Updated: 2022/11/24 21:03:35 by wkonings      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	parse_input(char **av, t_ps *a)
 	{
 		j = -1;
 		input = atol_split(av[i], a, -1, -1);
-		while (++j < a->len)
+		while (++j < a->len && x + 1 < a->alloc_size)
 		{
 			a->stack[++x].value = (int)input[j];
 			a->stack[x].simp = a->stack[x].value;
@@ -82,6 +82,7 @@ void	init_structs(t_ps *a, t_ps *b, int ac, char **av)
 	}
 	if (alloc < 1)
 		exit (1);
+	a->alloc_size = alloc;
 	a->stack = ft_calloc(sizeof(t_pair), alloc + 1);
 	if (!a->stack)
 		exit (1);
