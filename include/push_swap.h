@@ -6,7 +6,7 @@
 /*   By: wkonings <wkonings@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/02/16 14:10:12 by wkonings      #+#    #+#                 */
-/*   Updated: 2022/11/24 17:08:41 by wkonings      ########   odam.nl         */
+/*   Updated: 2022/11/24 21:04:09 by wkonings      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_ps
 	t_pair	*stack;
 
 	int		size;
+	int		alloc_size;
 	int		maxnum;
 	int		bitnum;
 	int		error;
